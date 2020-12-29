@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_select_back"
+                android:layout_width="50dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_back_arrow"
+                android:layout_height="match_parent"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Library"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/home_appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/home_tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabMaxWidth="80dp"
+                    app:tabPaddingStart="5dp"
+                    app:tabMode="scrollable"
+                    app:tabMinWidth="80dp"
+                    app:tabSelectedTextColor="@android:color/background_light"
+                    app:tabTextColor="@android:color/secondary_text_light_nodisable" />
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+       <!-- <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_sounds"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/recycler_view_categorys"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="-2dp"
+            tools:listitem="@layout/item_sound" />-->
+
+    </LinearLayout>
+
+
+</RelativeLayout>
