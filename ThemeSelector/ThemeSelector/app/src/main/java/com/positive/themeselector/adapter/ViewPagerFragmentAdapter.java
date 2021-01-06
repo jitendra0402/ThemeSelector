@@ -24,15 +24,6 @@ public class ViewPagerFragmentAdapter extends FragmentStateAdapter {
         mFragmentTitleList.add(title);
     }
 
-    public String getFragmentTitle(int position) {
-        return mFragmentTitleList.get(position);
-    }
-
-    public String getFragmentIcon(int position) {
-        return mFragmentIconList.get(position);
-    }
-
-
     @Override
     public int getItemCount() {
         return arrayList.size();
